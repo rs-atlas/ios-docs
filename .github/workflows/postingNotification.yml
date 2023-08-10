@@ -8,14 +8,15 @@ jobs: 							## job 설정
     steps:  					## steps 설정
     - uses: 8398a7/action-slack@v3
       with: 		
-        status: ${{ job.status }}
-        fields: commit,repo,author
-        author_name:  ${{ github.actor }} 
+        status: custome
         custom_payload: |
           {
-            text: "새 게시글을 업로드 되었습니다." ,
+            text: "New Posting" ,
             attachments: [{
-              color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning'
+              color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
+              title: 'News feed',
+              text: '새로운 게시글이 업로드되었습니다.',
+              
             }]
           }
     env:
