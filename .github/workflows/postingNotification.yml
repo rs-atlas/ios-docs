@@ -11,7 +11,7 @@ jobs: 							## job 설정
         status: custom
         custom_payload: |
           {
-            text: "New Posting" ,
+            text: "Notifications" ,
             attachments: [{
               color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
               title: 'News feed',
