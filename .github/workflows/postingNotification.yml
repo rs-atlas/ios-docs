@@ -14,8 +14,8 @@ jobs: 							## job 설정
             text: "Notifications" ,
             attachments: [{
               color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
-              title: 'News feed',
-              text: '새로운 게시글이 업로드되었습니다.',
+              title: '새로운 게시글이 업로드되었습니다.',
+              text: ' ${{ github.event.head_commit.message }}',
               
             }]
           }
