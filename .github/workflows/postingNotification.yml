@@ -8,7 +8,7 @@ jobs: 							## job 설정
     steps:  					## steps 설정
     - uses: 8398a7/action-slack@v3
       with: 		
-        status: custome
+        status: custom
         custom_payload: |
           {
             text: "New Posting" ,
