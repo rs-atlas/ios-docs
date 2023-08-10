@@ -13,9 +13,9 @@ jobs: 							## job 설정
         author_name:  ${{ github.actor }} 
         custom_payload: |
           {
+            text: "새 게시글을 업로드 되었습니다." ,
             attachments: [{
-              color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
-              text: `새 게시글을 업로드 되었습니다.`,
+              color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning'
             }]
           }
     env:
