@@ -1,0 +1,24 @@
+name: "posting Notification"    ## 워크플로우명
+on: push             ## 감지할 이벤트 -> Push 이벤트 감지! 
+
+jobs: 							## job 설정
+  create-pr-on-push:            ## 실행할 job 아이디 
+    runs-on: ubuntu-latest      ## job 가상환경 인스턴스 
+    if: ${{ contains(github.event.head_commit.message,'POST') }} || ${{ contains(github.event.head_commit.message,'post') }}
+    steps:  					## steps 설정
+    - uses: 8398a7/action-slack@v3
+      with: 		
+        status: ${{ job.status }}
+        fields: workflow,job,commit,repo,author,took,ref
+        author_name:  ${{ github.actor }} 
+        custom_payload: |
+          {
+            attachments: [{
+              color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
+              text: `${github.actor}님이 새 게시글을 업로드 했습니다.`,
+            }]
+          }
+    env:
+       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
+       if: always() # Pick up events even if the job fails or is canceled
+      
