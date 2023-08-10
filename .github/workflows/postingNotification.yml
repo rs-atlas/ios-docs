@@ -9,13 +9,13 @@ jobs: 							## job 설정
     - uses: 8398a7/action-slack@v3
       with: 		
         status: ${{ job.status }}
-        fields: workflow,job,commit,repo,author,took,ref
+        fields: commit,repo,author
         author_name:  ${{ github.actor }} 
         custom_payload: |
           {
             attachments: [{
               color: '${{ job.status }}' === 'success' ? 'good' : '${{ job.status }}' === 'failure' ? 'danger' : 'warning',
-              text: `${github.actor}님이 새 게시글을 업로드 했습니다.`,
+              text: `새 게시글을 업로드 되었습니다.`,
             }]
           }
     env:
