@@ -283,3 +283,55 @@ hashCode() 함수를 사용하면 다른 두 값이 대부분 각각 고유한 �
 ### Map
 Map은 키와 값으로 구성된 컬렉션
 
+![Alt text](https://developer.android.com/static/codelabs/basic-android-kotlin-compose-collections/img/8571494fb4a106b6_1440.png?hl%253Dko)
+
+맵은 mapOf() 또는 mutableMapOf() 함수를 사용하여 선언
+![Alt text](https://developer.android.com/static/codelabs/basic-android-kotlin-compose-collections/img/affc23a0e1f2b223_1440.png?hl%253Dko)
+
+![Alt text](https://developer.android.com/static/codelabs/basic-android-kotlin-compose-collections/img/2ed99c3391c74ec4_1440.png?hl%253Dko)
+
+## 고차함수 
+
+종류 : forEach(), map(), filter(), groupBy(), fold(), sortedBy()
+
+### forEach()
+
+{List object}.forEach {
+    println("Menu item: ${it.name}")
+}
+
+### Map
+
+![Alt text](https://developer.android.com/static/codelabs/basic-android-kotlin-compose-higher-order-functions/img/e0605b7b09f91717_1440.png?hl%253Dko)
+
+
+
+### filter 
+![Alt text](https://developer.android.com/static/codelabs/basic-android-kotlin-compose-higher-order-functions/img/d4fd6be7bef37ab3_1440.png?hl%253Dko)
+
+### groupBy
+![Alt text](https://developer.android.com/static/codelabs/basic-android-kotlin-compose-higher-order-functions/img/54e190b34d9921c0_1440.png?hl%253Dko)
+
+
+![Alt text](https://developer.android.com/static/codelabs/basic-android-kotlin-compose-higher-order-functions/img/4c3333da9e5ee352_1440.png?hl%253Dko)
+
+![Alt text](https://developer.android.com/static/codelabs/basic-android-kotlin-compose-higher-order-functions/img/4219eacdaca33f1d_1440.png?hl%253Dko)
+
+
+
+### fold 
+fold() 함수는 컬렉션에서 단일 값을 생성하는 데 사용
+초깃값. 데이터 유형은 함수를 호출할 때 추론됩니다. 즉, 초깃값 0은 Int로 추론
+(reduce 함수와 동일)
+숫자 유형의 sum() , sumOf() 함수도 있음 
+![Alt text](https://developer.android.com/static/codelabs/basic-android-kotlin-compose-higher-order-functions/img/a9e11a1aad05cb2f_1440.png?hl%253Dko)
+
+
+
+### sortedBy
+![Alt text](https://developer.android.com/static/codelabs/basic-android-kotlin-compose-higher-order-functions/img/5fce4a067d372880_1440.png?hl%253Dko)
+
+
+
+
+
