@@ -1,6 +1,6 @@
 ---
 slug: KMP 프로젝트 생성 및 환경설정
-title: MP 프로젝트 생성 및 환경설정
+title: KMP 프로젝트 생성 및 환경설정
 authors: atlas
 tags: [ kmp , compose, android , kotlin]
 ---
