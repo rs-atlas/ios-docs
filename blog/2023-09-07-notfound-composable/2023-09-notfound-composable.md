@@ -5,7 +5,6 @@ authors: atlas
 tags: [ kmp , compose, android ,error , kotlin , carter-rs ]
 ---
 
-# KMP Compose 자동완성
 
 ### 이슈
 프로젝트 생성시 commonMain에서 Composable을 사용할 수 없음
